@@ -24,8 +24,7 @@ const Home: NextPage = () => {
         {user !== null ? (
           <div>
             <h2>ログインしている</h2>
-            {user?.email}
-            {user.uid}
+            {user?.photoURL}
           </div>
         ) : (
           <h2>ログインしていない</h2>
