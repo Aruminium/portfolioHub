@@ -1,6 +1,7 @@
 import { login, logout, useUser } from "lib/auth";
 import type { NextPage } from "next";
 import Head from "next/head";
+import Dashboard from "components/dashboard/Dashboard";
 
 const Home: NextPage = () => {
   const user = useUser();
@@ -15,23 +16,16 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <Head>
-        <title>Auth Example</title>
-      </Head>
-
-      <div>
-        <h1>Auth Example</h1>
-        {user !== null ? (
-          <div>
-            <h2>ログインしている</h2>
-            {user?.photoURL}
-          </div>
-        ) : (
+      {user !== null ? (
+        <div>
+          <Dashboard />
+        </div>
+      ) : (
+        <div>
           <h2>ログインしていない</h2>
-        )}
-        <button onClick={handleLogin}>ログイン</button>
-        <button onClick={handleLogout}>ログアウト</button>
-      </div>
+          <button onClick={handleLogin}>ログイン</button>
+        </div>
+      )}
     </div>
   );
 };

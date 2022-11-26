@@ -816,7 +816,14 @@
   resolved "https://registry.npmjs.org/@mui/core-downloads-tracker/-/core-downloads-tracker-5.10.14.tgz"
   integrity sha512-qLgIJNOR9Dre8JiZ/neVzOf4jf88J6YtOkQqugtMrleLjbfRVUSS4LWl9CSOjNq76quYdmYWnSDgfQqOooT2cQ==
 
-"@mui/material@^5.10.14":
+"@mui/icons-material@*":
+  version "5.10.15"
+  resolved "https://registry.npmjs.org/@mui/icons-material/-/icons-material-5.10.15.tgz"
+  integrity sha512-fXkz7CtYTt4AH4YYT67VFhM/A3YCUqZGGLp/3BlzRPQRNEfFKknw3MgG1S5UYrY5weti8jxMx3mwwfhVP8OMhQ==
+  dependencies:
+    "@babel/runtime" "^7.20.1"
+
+"@mui/material@^5.0.0", "@mui/material@^5.10.14":
   version "5.10.14"
   resolved "https://registry.npmjs.org/@mui/material/-/material-5.10.14.tgz"
   integrity sha512-HWzKVAykePMx54WtxVwZyL1W4k3xlHYIqwMw0CaXAvgB3UE9yjABZuuGr8vG5Z6CSNWamzd+s1x8u7pQPFl9og==
@@ -1835,7 +1842,7 @@ find-up@^2.1.0:
   dependencies:
     locate-path "^2.0.0"
 
-firebase@*:
+firebase@^9.14.0:
   version "9.14.0"
   resolved "https://registry.npmjs.org/firebase/-/firebase-9.14.0.tgz"
   integrity sha512-wePrsf7W33mhT7RVXQavragoAgXb/NDm22vuhwJXkprrQ2Y9alrEKC5LTAtLJL3P2dHdDmeylS6PLZwWPEE79A==

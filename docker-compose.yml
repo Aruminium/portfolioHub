@@ -17,10 +17,11 @@ services:
       context: .
       dockerfile: ./docker/api/Dockerfile
     tty: true
+    restart: always
     env_file:
       - ./docker/db.env
     volumes:
-      - ./api:/api/
+      - ./api:/go/src/app
     ports:
       - 8080:8080
     depends_on:
@@ -28,12 +29,15 @@ services:
 
   nginx:
     image: nginx:latest
+    tty: true
     ports:
       - 80:80
     environment:
       - TZ=Asia/Tokyo
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - next
 
   mysql:
     build:

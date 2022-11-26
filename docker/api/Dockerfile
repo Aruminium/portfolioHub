@@ -1,5 +1,7 @@
 FROM golang:1.19-alpine
+RUN apk update && apk add git
+# appディレクトリの作成
+RUN mkdir /go/src/app
+WORKDIR /go/src/app
 
-WORKDIR /api
-# RUN apk add --no-cache alpine-sdk build-base
 CMD ["go", "run", "main.go"]

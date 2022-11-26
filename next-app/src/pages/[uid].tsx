@@ -15,6 +15,7 @@ const User: NextPage = () => {
         try {
         } catch (err) {
           console.error(err);
+          //失敗したら404返す
         }
       }
     };
