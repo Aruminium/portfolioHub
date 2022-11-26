@@ -9,7 +9,7 @@ func main() {
 	// controller
 	http.HandleFunc("/", echoHello)
 	// port
-	http.ListenAndServe(":8000", nil)
+	http.ListenAndServe(":8080", nil)
 }
 
 func echoHello(w http.ResponseWriter, r *http.Request) {
